@@ -1,0 +1,21 @@
+@if (tasks.length === 0) {
+    <p>Aucune tâche pour le moment.</p>
+  } @else {
+    <h2>Liste des tâches à faire</h2>
+    <ul class="list">
+      @for (task of tasks; track $index) {
+        <li>
+          <button
+            (click)="onToggle(task)"
+            [ngClass]="{'is-done' : task.isDone}"
+            class="list__item"
+          >
+            {{ task.title }}
+          </button>
+          <button (click)="onDelete(task.id)" class="icon" >
+            <mat-icon>delete</mat-icon>
+          </button>
+        </li>
+      }
+    </ul>
+  }

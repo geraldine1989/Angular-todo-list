@@ -1,0 +1,11 @@
+<div class="form">
+  <input
+    type="text"
+    [(ngModel)]="newTask"
+    placeholder="Ajouter une tâche"
+    (keyup.enter)="addTask()"
+    aria-label="Nouvelle tâche"
+  >
+  <button (click)="addTask()" class="button button--primary">Ajouter</button>
+</div>
+
