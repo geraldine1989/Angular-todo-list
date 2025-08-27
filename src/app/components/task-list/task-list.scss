@@ -1,0 +1,9 @@
+@use '../../../variables' as vars;
+
+.list {
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+    padding: 0;
+    list-style: none;
+}

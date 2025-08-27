@@ -1,0 +1,11 @@
+<li>
+    <button
+        (click)="onToggle()"
+        [class]="{'is-done' : task.isDone}"
+        class="list__item"
+    >{{ task.title}}</button>
+    <button 
+        (click)="onDelete()"
+        class="icon"
+    ><mat-icon>delete</mat-icon></button>
+</li>

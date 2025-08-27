@@ -1,0 +1,10 @@
+@if (tasks.length === 0) {
+    <p>Aucune tâche pour le moment.</p>
+  } @else {
+    <h2>Liste des tâches à faire</h2>
+    <ul class="list">
+      @for (task of tasks; track task.id) {
+        <app-todo-item [task]="task" (toggle)="onToggle($event)" (delete)="onDelete($event)"/>
+      }
+    </ul>
+  }
